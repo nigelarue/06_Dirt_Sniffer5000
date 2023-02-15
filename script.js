@@ -31,6 +31,18 @@ function storeCity() {
     var city = document.getElementById('city-input').value;
     console.log(city); // Just for testing
     // Do something with the city variable, like sending it to a server or displaying it on the page
+    var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey;
+  
+    fetch(queryURL)
+      .then(response => response.json())
+      .then(data => {
+        // Do something with the data, like display it on the page
+        console.log(data);
+      })
+      .catch(error => {
+        // Handle any errors
+        console.error(error);
+      });
   }
   
   document.getElementById('submitButton').addEventListener('click', storeCity);
