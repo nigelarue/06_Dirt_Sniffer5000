@@ -11,7 +11,7 @@
     <!-- header -->
     <header class="jumbotron">
         <h1 class="display-3">Dirt Sniffer 5000</h1>
-        <p class="lead">A simple weather app so you don't have to go outside to see if the rain coming...</p>
+        <p class="lead">A simple weather app so you don't have to have ESPN to tell when it's already raining...</p>
         <p id="currentDay" class="lead"></p>
     </header>
     <!-- main content -->
@@ -22,70 +22,23 @@
             <input type="submit" id="submitButton" name="q">
             <input type="reset">
         </div>
-        <article class="forecast">
-            <h1>Weather forecast for Today</h1>
-            <article class="currentDay-forecast">
-                <h2 id="currentDay"></h2>
-                <p id="todayForecast"></p>
-            </article>
-            <h1>Weather forecast for the Week</h1>
-            <article class="monday-forecast">
-                <h2 id="date-monday"></h2>
-                <p id="tempF"></p>
-                <p id="windMph"></p>
-                <p id="humidity"></p>
-                <p id="uvi"></p>
-                <p id="iconUrl"></p>
-            </article>
-            <article class="tuesday-forecast">
-                <h2 id="date-tuesday"></h2>
-                <p id="tempF"></p>
-                <p id="windMph"></p>
-                <p id="humidity"></p>
-                <p id="uvi"></p>
-                <p id="iconUrl"></p>
-            </article>
-            <article class="wednesday-forecast">
-                <h2 id="date-wednesday"></h2>
-                <p id="tempF"></p>
-                <p id="windMph"></p>
-                <p id="humidity"></p>
-                <p id="uvi"></p>
-                <p id="iconUrl"></p>
-            </article>
-            <article class="thursday-forecast">
-                <h2 id="date-thursday"></h2>
-                <p id="tempF"></p>
-                <p id="windMph"></p>
-                <p id="humidity"></p>
-                <p id="uvi"></p>
-                <p id="iconUrl"></p>
-            </article>
-            <article class="friday-forecast">
-                <h2 id="date-friday"></h2>
-                <p id="tempF"></p>
-                <p id="windMph"></p>
-                <p id="humidity"></p>
-                <p id="uvi"></p>
-                <p id="iconUrl"></p>
-            </article>
-            <article class="saturday-forecast">
-                <h2 id="date-saturday"></h2>
-                <p id="tempF"></p>
-                <p id="windMph"></p>
-                <p id="humidity"></p>
-                <p id="uvi"></p>
-                <p id="iconUrl"></p>
-            </article>
-            <article class="sunday-forecast">
-                <h2 id="date-sunday"></h2>
-                <p id="tempF"></p>
-                <p id="windMph"></p>
-                <p id="humidity"></p>
-                <p id="uvi"></p>
-                <p id="iconUrl"></p>
-            </article>
-        </article>
+        <div id="inputted-city">
+        </div>
+        <table id="forecast-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Icon</th>
+                <th>Temperature</th>
+                <th>Wind Speed</th>
+                <th>Humidity</th>
+                <th>UV Index</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Table rows will be dynamically added by JavaScript code -->
+            </tbody>
+          </table>          
     </main>
     <!-- footer -->
     <footer>
