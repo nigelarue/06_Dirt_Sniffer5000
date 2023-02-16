@@ -19,6 +19,7 @@ The API version we were told to use is deprecated and I could not get the UV ind
 ![Background at nighttime](./assets/images/Screen%20Shot%202023-02-16%20at%202.46.10%20AM.png).
 ![Background during twilight](./assets/images/Screen%20Shot%202023-02-16%20at%204.49.41%20AM.png).
 ![Twilight Gradient](./assets/images/Screen%20Shot%202023-02-16%20at%204.52.32%20AM.png).
+![Morning Gradient](./assets/images/Screen%20Shot%202023-02-16%20at%208.55.47%20AM.png).
 
 
 # Given User Story 
