@@ -3,47 +3,50 @@ var currentDayEl = $("#currentDay");
 var currentDateEl = $("#currentDate");
 var currentTimeEl = $("#currentTime");
 var bodyEl = $("body");
-var currentHour = moment().hours();
 
 function updateDateTime() {
   var now = moment();
+  var currentHour = now.hours();
+
   currentDayEl.text(now.format("dddd"));
   currentDateEl.text(now.format("MMM Do, YYYY"));
   currentTimeEl.text(now.format("h:mm:ss A"));
-  // If it is after 6pm, add a class to the body element that changes the background color
+
   if (currentHour >= 18) {
     bodyEl.addClass("dusk");
   } else {
     bodyEl.removeClass("dusk");
   }
-  if (currentHour >= 20) {
+  if (currentHour >= 20 || currentHour < 4) {
     bodyEl.addClass("night");
   } else {
     bodyEl.removeClass("night");
   }
-  if (currentHour >= 0) {
-    bodyEl.addClass("night");
-  } else {
-    bodyEl.removeClass("night");
-  }
-  if (currentHour >= 4) {
+  if (currentHour >= 4 && currentHour < 6) {
     bodyEl.addClass("twilight");
   } else {
     bodyEl.removeClass("twilight");
   }
-  if (currentHour >= 6) {
+  if (currentHour >= 6 && currentHour < 11) {
     bodyEl.addClass("morning");
   } else {
     bodyEl.removeClass("morning");
   }
-  if (currentHour >= 11) {
+  if (currentHour >= 11 && currentHour < 18) {
     bodyEl.addClass("daytime");
   } else {
     bodyEl.removeClass("daytime");
   }
 }
-// using moment.js updates the time regularly
-var currentHour = moment().hours();
+
+setInterval(function () {
+  updateDateTime();
+}, 1000);
+
+updateDateTime();
+
+$("#currentDay").text(moment().format("dddd, MMMM Do YYYY, h:mm a"));
+
 
 setInterval(function () {
   var now = moment();
