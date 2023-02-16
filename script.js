@@ -2,7 +2,7 @@ var apiKey = "431d21e1e34ce72549c518a2addb442d";
 var currentDayEl = $("#currentDay");
 var currentDateEl = $("#currentDate");
 var currentTimeEl = $("#currentTime");
-var mainEl = $("main");
+var bodyEl = $("body");
 var currentHour = moment().hours();
 
 function updateDateTime() {
@@ -10,36 +10,36 @@ function updateDateTime() {
   currentDayEl.text(now.format("dddd"));
   currentDateEl.text(now.format("MMM Do, YYYY"));
   currentTimeEl.text(now.format("h:mm:ss A"));
-  // If it is after 6pm, add a class to the main element that changes the background color
+  // If it is after 6pm, add a class to the body element that changes the background color
   if (currentHour >= 18) {
-    mainEl.addClass("dusk");
+    bodyEl.addClass("dusk");
   } else {
-    mainEl.removeClass("dusk");
+    bodyEl.removeClass("dusk");
   }
   if (currentHour >= 20) {
-    mainEl.addClass("night");
+    bodyEl.addClass("night");
   } else {
-    mainEl.removeClass("night");
+    bodyEl.removeClass("night");
   }
   if (currentHour >= 0) {
-    mainEl.addClass("night");
+    bodyEl.addClass("night");
   } else {
-    mainEl.removeClass("night");
+    bodyEl.removeClass("night");
   }
   if (currentHour >= 4) {
-    mainEl.addClass("twilight");
+    bodyEl.addClass("twilight");
   } else {
-    mainEl.removeClass("twilight");
+    bodyEl.removeClass("twilight");
   }
   if (currentHour >= 6) {
-    mainEl.addClass("morning");
+    bodyEl.addClass("morning");
   } else {
-    mainEl.removeClass("morning");
+    bodyEl.removeClass("morning");
   }
   if (currentHour >= 11) {
-    mainEl.addClass("daytime");
+    bodyEl.addClass("daytime");
   } else {
-    mainEl.removeClass("daytime");
+    bodyEl.removeClass("daytime");
   }
 }
 // using moment.js updates the time regularly
@@ -115,7 +115,7 @@ function renderWeatherData(data) {
   uviEl.textContent = `${todayUvi}`;
 
   // Render forecast table
-  for (let i = 8; i < data.list.length; i += 8) {
+  for (let i = 0; i < 5; i++) {
     const date = new Date(data.list[i].dt * 1000);
     const tempF = (data.list[i].main.temp - 273.15) * 1.8 + 32;
     const windMph = data.list[i].wind.speed;
@@ -135,6 +135,7 @@ function renderWeatherData(data) {
   }
 }
 
+
 // Submit button event listener
 submitBtn.addEventListener("click", () => {
   const city = cityInput.value;
@@ -152,7 +153,6 @@ submitBtn.addEventListener("click", () => {
 });
 
 // Load weather data from local storage if available
-// Check if there is any stored data in the local storage
 if (localStorage.getItem("weatherData")) {
     const storedData = JSON.parse(localStorage.getItem("weatherData"));
     renderWeatherData(storedData);

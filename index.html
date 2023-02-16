@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sniff the Dirt</title>
     <link rel="stylesheet" href="./assets/style.css"/>
+    <title>Sniff the Dirt</title>
   </head>
   <body>
     <!-- Jumbotron -->
@@ -23,16 +23,15 @@
         <label for="city-search">Input City Name:</label>
         <input type="text" id="city-input" name="city-input" />
         <input type="submit" id="submitButton" name="q" />
-        <input type="reset" />
         <div>
           <h2 id="inputted-city"></h2>
         </div>
       </div>
 
       <div class="weather-container">
-        <article class="currentDay-container">
-          <h1>Weather Forecast for Today</h1>
-          <p id="currentDay"></p>
+        <article class="current-day-container">
+          <h1>Today's Forecast</h1>
+          <p id="current-day"></p>
           <p id="iconUrl"></p>
           <p>Temperature:</p>
           <p id="tempF"></p>
@@ -62,20 +61,18 @@
             </table>
           </div>
         </div>
-      </div>
-    </main>
-    <!-- History Card -->
-    <main>
+              <!-- History Card -->
         <div class="search-history-container">
-        <div class="card">
-            <h3>SEARCH HISTORY</h3>
-            <div id="search-history">
-                <!-- buttons for history goes here -->
+            <div class="card">
+                <h3>SEARCH HISTORY</h3>
+                <div id="search-history">
+                    <!-- buttons for history goes here -->
+                </div>
             </div>
         </div>
-        </div>
-    </main>
+      </div>
 
+    </main>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./script.js"></script>
