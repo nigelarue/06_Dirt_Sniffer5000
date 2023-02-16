@@ -60,7 +60,7 @@ function storeCity() {
   var city = document.getElementById("city-input").value;
   console.log(city);
   var queryURL =
-    "http://api.openweathermap.org/data/2.5/forecast?q=" +
+    "https://api.openweathermap.org/data/2.5/forecast?q=" +
     city +
     "&appid=" +
     apiKey;
@@ -98,7 +98,7 @@ function renderWeatherData(data) {
   const todayWindMph = data.list[0].wind.speed;
   const todayHumidity = data.list[0].main.humidity;
   const todayUvi = data.list[0].uvi;
-  const todayIconUrl = `http://openweathermap.org/img/wn/${data.list[0].weather[0].icon}.png`;
+  const todayIconUrl = `https://openweathermap.org/img/wn/${data.list[0].weather[0].icon}.png`;
 
   // Render current day info
   const currentDayEl = document.getElementById("currentDay");
@@ -121,7 +121,7 @@ function renderWeatherData(data) {
     const windMph = data.list[i].wind.speed;
     const humidity = data.list[i].main.humidity;
     const uvi = data.list[i].uvi;
-    const iconUrl = `http://openweathermap.org/img/wn/${data.list[i].weather[0].icon}.png`;
+    const iconUrl = `https://openweathermap.org/img/wn/${data.list[i].weather[0].icon}.png`;
     const forecastRow = document.createElement("tr");
     forecastRow.innerHTML = `
         <td>${date.toDateString()} </td>
@@ -140,7 +140,7 @@ function renderWeatherData(data) {
 submitBtn.addEventListener("click", () => {
   const city = cityInput.value;
   fetch(
-    `http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`
+    `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`
   )
     .then((response) => response.json())
     .then((data) => {
@@ -169,7 +169,7 @@ function renderSearchHistory() {
     searchHistoryItemEl.classList.add("search-history-item");
     searchHistoryItemEl.addEventListener("click", function () {
       fetch(
-        `http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`
+        `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`
       )
         .then((response) => response.json())
         .then((data) => {
