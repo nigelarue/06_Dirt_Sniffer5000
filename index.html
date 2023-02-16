@@ -1,31 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sniff the Dirt</title>
-    <link rel="stylesheet" href="./assets/style.css"
-</head> 
-<body>
-    <!-- header -->
-    <header class="jumbotron">
-        <h1 class="display-3">Dirt Sniffer 5000</h1>
-        <p class="lead">A simple weather app so you don't have to have ESPN to tell when it's already raining...</p>
-        <p id="currentDay" class="lead"></p>
-    </header>
-    <!-- main content -->
+    <link rel="stylesheet" href="./assets/style.css"/>
+  </head>
+  <body>
+    <!-- Jumbotron -->
+    <div class="jumbotron">
+      <h1 class="display-3">Dirt Sniffer 5000</h1>
+      <p class="lead">
+        A simple weather app so you don't have to have ESPN to tell when it's
+        already raining...
+      </p>
+      <p id="currentDay" class="lead"></p>
+    </div>
+    <!-- Forecast content -->
     <main>
-        <div class="userInputContainer">
-            <label for="city-search">Input City Name:</label>
-            <input type="text" id="city-input" name="city-input" >
-            <input type="submit" id="submitButton" name="q">
-            <input type="reset">
+      <div class="userInputContainer">
+        <label for="city-search">Input City Name:</label>
+        <input type="text" id="city-input" name="city-input" />
+        <input type="submit" id="submitButton" name="q" />
+        <input type="reset" />
+        <div>
+          <h2 id="inputted-city"></h2>
         </div>
-        <div id="inputted-city">
-        </div>
-        <table id="forecast-table">
-            <thead>
+      </div>
+
+      <div class="weather-container">
+        <article class="currentDay-container">
+          <h1>Weather Forecast for Today</h1>
+          <p id="currentDay"></p>
+          <p id="iconUrl"></p>
+          <p>Temperature:</p>
+          <p id="tempF"></p>
+          <p>Wind:</p>
+          <p id="windMph"></p>
+          <p>Humidity:</p>
+          <p id="humidity"></p>
+          <p>UV Index:</p>
+          <p id="uvi"></p>
+        </article>
+
+        <div class="forecast-container">
+          <div class="forecast-title">Weather Forecast for the Week</div>
+          <div class="forecast">
+            <table>
               <tr>
                 <th>Date</th>
                 <th>Icon</th>
@@ -34,18 +56,28 @@
                 <th>Humidity</th>
                 <th>UV Index</th>
               </tr>
-            </thead>
-            <tbody>
+            </table>
+            <table id="forecast-table">
               <!-- Table rows will be dynamically added by JavaScript code -->
-            </tbody>
-          </table>          
+            </table>
+          </div>
+        </div>
+      </div>
     </main>
-    <!-- footer -->
-    <footer>
+    <!-- History Card -->
+    <main>
+        <div class="search-history-container">
+        <div class="card">
+            <h3>SEARCH HISTORY</h3>
+            <div id="search-history">
+                <!-- buttons for history goes here -->
+            </div>
+        </div>
+        </div>
+    </main>
 
-    </footer>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./script.js"></script>
-</body>
+  </body>
 </html>
