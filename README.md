@@ -4,16 +4,16 @@ The Dirt Sniffer 5000 uses the [OpenWeather One Call API](https://openweathermap
 
 The Background dynamically shifts gradients depending on the time of day. 
 
-![The webpage includes an input field to insert a city name, and three containers with today's weather, the following four days weather forecast, and users search history.](./assets/images/Screen%20Shot%202023-02-16%20at%202.15.01%20AM.png).
+![The webpage includes an input field to insert a city name, and three containers with today's weather, the following four days weather forecast, and users search history.](./assets/images/Screen%20Shot%202023-02-16%20at%202.44.50%20AM.png).
 
 Visit GitHub Repo:
-[OpenWeather One Call API](https://github.com/nigelarue/06_Dirt_Sniffer5000).
+[Dirt Sniffer 5000 Repository](https://github.com/nigelarue/06_Dirt_Sniffer5000).
 Visit Live URL:
-[OpenWeather One Call API](https://openweathermap.org/api/one-call-api).
+[Live Webpage](https://nigelarue.github.io/06_Dirt_Sniffer5000/).
 # Issues
 
 The API version we were told to use is deprecated and I could not get the UV index to return data properly. As a result I created a dynamic background that should shift gradients depending on the time of day to try to make up for this missing technicality criteria. 
-![The webpage includes an input field to insert a city name, and three containers with today's weather, the following four days weather forecast, and users search history.](./assets/images/Screen%20Shot%202023-02-16%20at%202.24.40%20AM.png).
+![The webpage includes an input field to insert a city name, and three containers with today's weather, the following four days weather forecast, and users search history.](./assets/images/Screen%20Shot%202023-02-16%20at%202.46.10%20AM.png).
 
 # Given User Story 
 
