@@ -126,19 +126,19 @@ th, td {
 .twilight {
 
     /* ff 3.6+ */
-    background:-moz-radial-gradient(circle at 0% 100%, #EE82EE 0%, #0000FF 100%);
+    background:-moz-radial-gradient(circle at 100% 100%, #EE82EE 1%, #0000FF 100%);
 
     /* safari 5.1+,chrome 10+ */
-    background:-webkit-radial-gradient(circle at 0% 100%, #EE82EE 0%, #0000FF 100%);
+    background:-webkit-radial-gradient(circle at 100% 100%, #EE82EE 1%, #0000FF 100%);
 
     /* opera 11.10+ */
-    background:-o-radial-gradient(circle at 0% 100%, #EE82EE 0%, #0000FF 100%);
+    background:-o-radial-gradient(circle at 100% 100%, #EE82EE 1%, #0000FF 100%);
 
     /* ie 10+ */
-    background:-ms-radial-gradient(circle at 0% 100%, #EE82EE 0%, #0000FF 100%);
+    background:-ms-radial-gradient(circle at 100% 100%, #EE82EE 1%, #0000FF 100%);
 
     /* global 92%+ browsers support */
-    background:radial-gradient(circle at 0% 100%, #EE82EE 0%, #0000FF 100%);
+    background:radial-gradient(circle at 100% 100%, #EE82EE 1%, #0000FF 100%);
 
     color: #FFFFFF;
 }

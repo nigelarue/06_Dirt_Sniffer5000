@@ -45,14 +45,14 @@ Simple follow the links to the webpage and input a desired location.
 ## Links
 
 Visit GitHub Repo:
-[Dirt Sniffer 5000 Repository](https://github.com/nigelarue/06_Dirt_Sniffer5000).
+* [Dirt Sniffer 5000 Repository](https://github.com/nigelarue/06_Dirt_Sniffer5000)
 Visit Live URL:
-[Live Webpage](https://nigelarue.github.io/06_Dirt_Sniffer5000/).
+* [Live Webpage](https://nigelarue.github.io/06_Dirt_Sniffer5000/)
 
 ## Issues
 
 The API version we were told to use is deprecated and I could not get the UV index to return data properly. As a result I created a dynamic background that should shift gradients depending on the time of day to try to make up for this missing technicality criteria. 
-[UV Deprecated](./assets/images/Screen%20Shot%202023-02-16%20at%202.24.40%20AM.png).
+![UV Deprecated](./assets/images/Screen%20Shot%202023-02-16%20at%202.24.40%20AM.png).
 
 ## Given User Story 
 
