@@ -1,4 +1,17 @@
 # 06_Dirt_Sniffer5000
+
+## Table of Contents
+
+1. [Description](#description)
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [Issues](#Issues)
+5. [Links](#links)
+6. [Issues](#Issues)
+7. [Contributing](#contributing)
+
+## Description
+
 That's no moon, that's a space station! The days of sniffin' the dirt are over. Weather apps these days are in it for the money, not the science. All quotes are either a reference to the classic movies, "Twister" or "Mean Girls".
 The Dirt Sniffer 5000 uses the [OpenWeather One Call API](https://openweathermap.org/api/one-call-api) to retrieve weather data for cities and uses users' `localStorage` to store any persistent data. For more information on how to work with the OpenWeather API, refer to the [Full-Stack Blog on how to use API keys](https://coding-boot-camp.github.io/full-stack/apis/how-to-use-api-keys).
 
@@ -6,23 +19,32 @@ The Background dynamically shifts gradients depending on the time of day.
 
 ![The webpage includes an input field to insert a city name, and three containers with today's weather, the following four days weather forecast, and users search history.](./assets/images/Screen%20Shot%202023-02-16%20at%202.44.50%20AM.png).
 
+## Examples of one of 5 color options for the background given the user's local time: 
+
+NOTE: Dusk and twilight are shorter intervals(2 hours), I have yet to capture the 'dusk' gradient.
+
+![Background at nighttime](./assets/images/Screen%20Shot%202023-02-16%20at%202.46.10%20AM.png).
+![Twilight Gradient](./assets/images/Screen%20Shot%202023-02-16%20at%204.52.32%20AM.png).
+![Morning Gradient](./assets/images/Screen%20Shot%202023-02-16%20at%208.55.47%20AM.png).
+![Background during daytime](./assets/images/Screen%20Shot%202023-02-17%20at%202.44.05%20PM.png).
+
+## Usage
+
+Simple follow the links to the webpage and input a desired location. 
+
+## Links
+
 Visit GitHub Repo:
 [Dirt Sniffer 5000 Repository](https://github.com/nigelarue/06_Dirt_Sniffer5000).
 Visit Live URL:
 [Live Webpage](https://nigelarue.github.io/06_Dirt_Sniffer5000/).
-# Issues
+
+## Issues
 
 The API version we were told to use is deprecated and I could not get the UV index to return data properly. As a result I created a dynamic background that should shift gradients depending on the time of day to try to make up for this missing technicality criteria. 
 [UV Deprecated](./assets/images/Screen%20Shot%202023-02-16%20at%202.24.40%20AM.png).
-# Example of one of 5 color options for the background given the user's location:
 
-![Background at nighttime](./assets/images/Screen%20Shot%202023-02-16%20at%202.46.10%20AM.png).
-![Background during twilight](./assets/images/Screen%20Shot%202023-02-16%20at%204.49.41%20AM.png).
-![Twilight Gradient](./assets/images/Screen%20Shot%202023-02-16%20at%204.52.32%20AM.png).
-![Morning Gradient](./assets/images/Screen%20Shot%202023-02-16%20at%208.55.47%20AM.png).
-
-
-# Given User Story 
+## Given User Story 
 
 ```
 AS A traveler
@@ -30,7 +52,7 @@ I WANT to see the weather outlook for multiple cities
 SO THAT I can plan a trip accordingly
 ```
 
-# Given Criteria
+## Given Criteria
 
 ```
 GIVEN a weather dashboard with form inputs
@@ -45,3 +67,7 @@ THEN I am presented with a 5-day forecast that displays the date, an icon repres
 WHEN I click on a city in the search history
 THEN I am again presented with current and future conditions for that city
 ```
+
+## Contributing
+
+App created by Nigel LaRue. If you would like to submit a ticket please visit the repository link above or to contact me directly, please email me [here](mailto:larue.nigel91@gmail.com).
