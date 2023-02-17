@@ -63,7 +63,7 @@ function storeCity() {
   var city = document.getElementById("city-input").value;
   console.log(city);
   var queryURL =
-    "https://api.openweathermap.org/data/2.5/forecast?q=" +
+    "https://api.openweathermap.org/data/2.5/forecast/daily?q=" +
     city +
     "&appid=" +
     apiKey;
@@ -119,12 +119,12 @@ function renderWeatherData(data) {
 
   // Render forecast table
   for (let i = 0; i < 5; i++) {
-    const date = new Date(data.list[i].dt * 1000);
-    const tempF = (data.list[i].main.temp - 273.15) * 1.8 + 32;
-    const windMph = data.list[i].wind.speed;
-    const humidity = data.list[i].main.humidity;
-    const uvi = data.list[i].uvi;
-    const iconUrl = `https://openweathermap.org/img/wn/${data.list[i].weather[0].icon}.png`;
+    const date = new Date(data.list[i*8].dt * 1000);
+    const tempF = (data.list[i*8].main.temp - 273.15) * 1.8 + 32;
+    const windMph = data.list[i*8].wind.speed;
+    const humidity = data.list[i*8].main.humidity;
+    const uvi = data.list[i*8].uvi;
+    const iconUrl = `https://openweathermap.org/img/wn/${data.list[i*8].weather[0].icon}.png`;
     const forecastRow = document.createElement("tr");
     forecastRow.innerHTML = `
         <td>${date.toDateString()} </td>
@@ -143,7 +143,7 @@ function renderWeatherData(data) {
 submitBtn.addEventListener("click", () => {
   const city = cityInput.value;
   fetch(
-    `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`
+    `https://api.openweathermap.org/data/2.5/forecast/daily?q=${city}&appid=${apiKey}`
   )
     .then((response) => response.json())
     .then((data) => {
@@ -172,7 +172,7 @@ function renderSearchHistory() {
     searchHistoryItemEl.classList.add("search-history-item");
     searchHistoryItemEl.addEventListener("click", function () {
       fetch(
-        `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`
+        `https://api.openweathermap.org/data/2.5/forecast/daily?q=${city}&appid=${apiKey}`
       )
         .then((response) => response.json())
         .then((data) => {
